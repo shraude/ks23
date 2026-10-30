@@ -1,0 +1,51 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+df = pd.read_csv("disease.csv")
+print("Dataset:")
+print(df)
+
+le = LabelEncoder()
+for c in df.columns:
+    df[c] = le.fit_transform(df[c])
+print("\nEncoded Dataset:")
+print(df)
+
+X = df.drop("Diagnosis", axis=1)
+y = df["Diagnosis"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+model = MultinomialNB()
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("\nConfusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred, zero_division=0))
+
+print("\n--- New Patient ---")
+patient = [[
+    int(input("Sore Throat (0=No, 1=Yes): ")),
+    int(input("Fever (0=No, 1=Yes): ")),
+    int(input("Swollen Glands (0=No, 1=Yes): ")),
+    int(input("Congestion (0=No, 1=Yes): ")),
+    int(input("Headache (0=No, 1=Yes): "))
+]]
+
+p = model.predict(patient)
+prob = model.predict_proba(patient)[0]
+
+print("\nPredicted Disease:", le.classes_[p[0]])
+
+print("\nProbabilities:")
+for d, x in zip(le.classes_, prob):
+    print(d, ":", round(x * 100, 2), "%")
