@@ -1,0 +1,16 @@
+def RailFence(txt):
+    result = ""
+    # Add characters at even indices
+    for i in range(len(txt)):
+        if i % 2 == 0:
+            result += txt[i]
+    # Add characters at odd indices
+    for i in range(len(txt)):
+        if i % 2 != 0:
+            result += txt[i]
+    return result
+
+
+if __name__ == "__main__":
+    string = input("Enter the string : ")
+    print("Ciphertext :", RailFence(string))
