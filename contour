@@ -1,0 +1,9 @@
+x <- seq(-2, 2, length = 30)
+y <- seq(-2, 2, length = 30)
+
+z <- outer(x, y, function(x, y) x^2 + y^2)
+
+contour(x, y, z,
+        main = "Contour Plot",
+        xlab = "X",
+        ylab = "Y")
