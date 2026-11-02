@@ -1,0 +1,11 @@
+hours <- c(1, 2, 3, 4, 5, 6, 7)
+marks <- c(40, 45, 55, 60, 65, 75, 85)
+
+plot(
+  hours,
+  marks,
+  main = "Study Hours vs Marks",
+  xlab = "Study Hours",
+  ylab = "Marks",
+  pch = 19
+)
