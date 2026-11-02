@@ -1,0 +1,6 @@
+marks <- c(65, 72, 80, 85, 90)
+names(marks) <- c("Amit", "Neha", "Rahul", "Priya", "Riya")
+
+dotchart(marks,
+         main = "Student Marks",
+         xlab = "Marks")
