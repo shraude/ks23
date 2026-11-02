@@ -1,0 +1,9 @@
+x <- seq(-2, 2, length = 20)
+y <- seq(-2, 2, length = 20)
+
+z <- outer(x, y, function(x, y) x^2 + y^2)
+
+filled.contour(x, y, z,
+               main = "Level Plot",
+               xlab = "X",
+               ylab = "Y")
