@@ -1,0 +1,22 @@
+hours <- c(1, 2, 3, 4, 5, 6, 7, 8)
+marks <- c(35, 40, 50, 55, 60, 68, 75, 82)
+
+model <- lm(marks ~ hours)
+
+summary(model)
+
+model
+
+new_data <- data.frame(hours = 9)
+predict(model, new_data)
+
+plot(
+  hours,
+  marks,
+  main = "Hours Studied vs Marks",
+  xlab = "Hours Studied",
+  ylab = "Marks",
+  pch = 19
+)
+
+abline(model)
