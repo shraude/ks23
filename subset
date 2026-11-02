@@ -1,0 +1,14 @@
+student <- data.frame(
+  Name = c("Amit", "Neha", "Rahul", "Priya"),
+  Age = c(20, 21, 20, 22),
+  Marks = c(75, 85, 65, 90)
+)
+
+
+student[1, ]
+
+
+student[, "Name"]
+
+
+student[student$Marks > 75, ]
