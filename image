@@ -1,0 +1,6 @@
+m <- matrix(1:25, nrow = 5)
+
+image(m,
+      main = "Image Plot",
+      xlab = "Columns",
+      ylab = "Rows")
