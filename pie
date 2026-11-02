@@ -1,0 +1,8 @@
+marks <- c(75, 85, 65, 90, 80)
+subjects <- c("Maths", "Science", "English", "Computer", "History")
+
+pie(
+  marks,
+  labels = subjects,
+  main = "Marks Distribution"
+)
