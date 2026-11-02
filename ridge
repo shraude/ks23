@@ -1,0 +1,28 @@
+install.packages("glmnet")
+library(glmnet)
+
+study_hours <- c(2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+attendance <- c(60, 65, 70, 72, 75, 78, 80, 85, 88, 90)
+assignment_score <- c(50, 55, 60, 62, 65, 70, 72, 78, 82, 85)
+marks <- c(42, 48, 54, 58, 64, 69, 74, 79, 85, 89)
+
+X <- cbind(study_hours, attendance, assignment_score)
+Y <- marks
+
+ridge_model <- glmnet(X, Y, alpha = 0)
+
+cv_model <- cv.glmnet(X, Y, alpha = 0)
+
+print(cv_model$lambda.min)
+
+print(coef(cv_model, s = "lambda.min"))
+
+new_student <- matrix(c(8, 82, 75), nrow = 1)
+
+prediction <- predict(
+  cv_model,
+  newx = new_student,
+  s = "lambda.min"
+)
+
+print(prediction)
