@@ -1,0 +1,10 @@
+marks <- c(75, 85, 65, 90, 80)
+students <- c("Amit", "Neha", "Rahul", "Priya", "Riya")
+
+barplot(
+  marks,
+  names.arg = students,
+  main = "Student Marks",
+  xlab = "Students",
+  ylab = "Marks"
+)
