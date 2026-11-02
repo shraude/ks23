@@ -1,0 +1,9 @@
+m <- matrix(1:9, nrow = 3, ncol = 3)
+
+m
+
+m[2, 3]
+
+t(m)
+
+sum(m)
