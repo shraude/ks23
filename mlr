@@ -1,0 +1,30 @@
+study_hours <- c(2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+attendance <- c(60, 65, 70, 72, 75, 78, 80, 85, 88, 90)
+marks <- c(45, 50, 55, 60, 65, 70, 74, 80, 84, 88)
+
+data <- data.frame(
+  study_hours,
+  attendance,
+  marks
+)
+
+model <- lm(
+  marks ~ study_hours + attendance,
+  data = data
+)
+
+summary(model)
+
+coef(model)
+
+new_student <- data.frame(
+  study_hours = 7,
+  attendance = 80
+)
+
+prediction <- predict(
+  model,
+  newdata = new_student
+)
+
+print(prediction)
