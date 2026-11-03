@@ -1,0 +1,261 @@
+3...
+Aim: - Explore passive and active reconnaissance techniques including OSINT, competitive intelligence, and search engine reconnaissance strategies.
+Step 1: Browse and Search Who-is and click on WHOIS Search, Domain Name, Website
+Step 2: Write the Domain name i.e., amazon.com and click on Search option
+Step 3: Exploring the Registrar information of the given Domain.
+Step 4: Exploring the DNS Records of the given Domain.
+Step 5: Exploring the Diagnostics reports of the given Domain.
+
+
+
+
+
+
+
+
+
+4...
+Aim: Study DNS structure, record types (A, MX, NS, TXT, CNAME), WHOIS lookup, and ARIN databases to understand infrastructure mapping.
+Step 1: Open Command Prompt.
+Step 2: To identify the record maps a domain to an IPv4 address. 
+Step 3: To identify MX records specify mail servers.
+Step 4: To identify NS records authoritative DNS servers.
+Step 5: To identify TXT records often contain SPF, DKIM and verification data.
+Step 6: To identify CNAME records point one hostname to another.
+Step 7: To identify ARIN database to understand infrastructure mapping.
+
+
+
+
+
+
+
+
+
+
+
+5...
+Aim: - Examine psychological manipulation attacks including phishing, pretexting, baiting, and impersonation. Analyze real-world social engineering cases.
+
+Step 1: Open VMWare and Login in Kali Linux using your Credentials.
+Step 2: Open Root Terminal Emulator in Kali Linux using Authentication Password.
+Step 3: Update it using (apt install update).
+Step 4: For the first time we’re using SET (Social Engineer Toolkit) so we’ve to install it using command i.e., (apt install –only-upgrade set).
+Step 5: Enter next command to find the SET Toolkit i.e., (setoolkit) command.
+Step 7: User has to select one by one from the menu.
+Step 8: After getting the IP address, again click on Enter.
+Step 9: User has to Select a template from this. (Select option 2 i.e., Google).
+Step 10: Open Browser i.e., Firefox in Kali Linux and enter (localhost/) and click on Enter.
+Step 11: Enter any fake login credentials and click on Sign In.
+Step 12: Now come back to Kali Linux and user will see the details of login credentials that user login in browser.
+Step 13: Again, go back to the Firefox browser and enter some another address in browser such as (www.edureka.co/community) and click on enter.
+Step 14: Now user has to proceed with the same process from Root terminal emulator from (setoolkit) command.
+Step 15: Now copy the full URL from Firefox browser of Edureka community and paste it in Kali Linux.
+
+
+
+
+
+
+
+
+
+
+6...
+Aim: - Understand TCP/IP behavior and scanning methodologies including SYN, FIN, NULL, XMAS, and ACK scans, along with firewall detection logic.
+
+Step 1: Open Nmap Software to perform ACK scan port.
+Step 2: To perform ACK scan, user must enter target address and command and click on scan, you’ll see information about target system’s network services.
+Step 3: To perform SYN Stealth scan, user must enter Target address and command and click on scan, you’ll see information about target system’s   network services.
+Step 4: To perform FIN scan, user must enter Target address and command and click on scan, you’ll see information about target system’s network services.
+Step 5: To perform NULL scan, user must enter Target address and command and click on scan, you’ll see information about target system’s network services.
+Step 6: To perform XMAS scan, user must enter Target address and command and click on scan, you’ll see information about target system’s network services.
+
+
+
+
+
+
+7...
+Aim: - Study enumeration techniques such as SNMP (Simple Network Management Protocol) enumeration, NetBIOS scanning, and service fingerprinting to identify exposed system service.
+Step 1: Open Nmap.
+Authorization Confirmation:
+Before starting the scan, proper authorization was confirmed.
+Step 2: Host Discovery (Ping Scan):
+ Purpose: To identify which hosts are active before performing detailed scans.
+Step 3: Port Scanning (TCP SYN Scan):
+Purpose: To detect open TCP ports on the target system.
+Step 4: Service and Version Detection:
+Purpose: To identify services running on open ports along with their version numbers.
+Step 5: OS Detection and Traceroute:
+Purpose: To attempt operating system fingerprinting and determine the network path to the target.
+Step 6: Aggressive Scan:
+Purpose: Performs a comprehensive scan including OS detection, service detection, script scanning, and trace-route.
+Step 7: UDP (User Datagram Protocol) Scanning:
+Purpose: 
+To identify open UDP services such as DNS and SNMP.
+UDP scans are slower and should be used selectively
+*Results: Nmap successfully identified live hosts, open ports, running services, and probable operating system details of the target system.*
+
+
+
+
+
+
+
+
+
+
+8...
+Aim: Analyze password cracking methods, privilege escalation techniques, rootkits, and spyware technologies from a defensive perspective.
+Step 1: Open Command Prompt of Windows PowerShell.
+Step 2: Analyze Password Security.
+Checking Password Policy.
+View Local user information.
+Observations: 
+Minimum Password Length.
+Password age.
+Lockout Policy.
+Step 3: Analyze User Privileges.
+Observations: 
+Current User.
+Administrator Membership.
+Enabled privileges.
+Step 4: Analyze Running Process (Rootkit Awareness)
+List of driver’s queries:
+Observations:
+Running Processes.
+Installed Drivers.
+Step 5: Analyze Spyware Indicators:
+Display active network connections:
+Display Scheduled Tasks:
+Observations:
+Unknown Connections.
+Unexpected scheduled tasks.
+Step 6: Check System Information:
+Checked the Installed Updates:
+
+net accounts , net user , whoami , whoami/groups
+tasklist , driverquery , netstat -ano , schtasks /query
+systeminfo , wmic qfe
+
+
+
+
+
+
+
+
+
+
+
+9...
+Aim: - Differentiate between encryption and hashing mechanisms, password storage models, salting techniques, and cryptographic weaknesses.
+Step 1: Open CrypTool software and Click on New File.
+Step 2: A Blank Worksheet will be opened.
+Step 3: Type some text passwords and click on Encrypt/Decrypt option to encrypt the passwords using the RC4 algorithm.
+Step 4: At the key entry part of RC4 Algorithm, enter key length i.e., 8 bits and key value i.e., 32 and then click on Encrypt option.
+Step 5: You’ll see the Encrypted Text Password which has been entered by the user.
+Step 6: Again, the step we will follow to Decrypt the text password entered by the user.
+Step 7: After Decrypting the text password, you’ll see the same text password previously entered by the user.
+
+
+
+
+
+
+
+
+
+10...
+Aim: - Study packet sniffing techniques, ARP poisoning, MAC flooding, DNS spoofing, and countermeasures to secure network communication.
+Step 1: Open Wireshark and see the network status.
+Step 2: For Packet Sniffing Techniques: 
+First double click on Ethernet Network, we’ll see the Network capturing from Ethernet, and we’ve to stop the network by clicking on Wireshark Symbol.
+Step 3: To capture packets, click on Protocol and we’ll see the packet details in left side and packet bytes in right side.
+Step 4: To capture file properties, click on Statistics and click on Capture file properties.Step 5: Final Output of Packet filtering we can see.
+Step 6: To perform ARP (Address Resolution Protocol) Poisoning: Open Wireshark and see the network status.
+
+
+
+
+
+
+
+
+
+Step 7: For MAC (Media Access Control) Flooding:
+Open CMD of Windows PowerShell.
+Execute the command of MAC in prompt and select Ethernet Physical address.
+Open Wireshark and see the network status.
+Click on Ethernet network and enter the Physical address filter in (Enter a capture filter) space and click on enter.You’ll see the network. Click on Stop Capturing and capture the filters.
+
+
+
+
+
+
+
+
+
+We can the Capture filters window and click on create a new file and create the MAC Address with the same Physical address layer.
+Click on Capture settings window and start the network.
+Step 8: For DNS (Domain Name Service) Spoofing:
+Open Wireshark and see the network status.
+First double click on Ethernet Network, we’ll see the Network capturing from Ethernet, and we’ve to stop the network by clicking on Wireshark Symbol.
+Click on MDNS Option and see the information of DNS Spoofing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
