@@ -1,0 +1,390 @@
+1...
+Aim: - Examine types of DoS/DDoS attacks including SYN flooding and Smurf attacks. Understand botnet structures and mitigation strategies.
+Step 1: Open VMWare and Open Kali Linux and enter your login credentials.
+Step 2: Click on Root Terminal Emulator on Kali Linux Desktop.
+Step 3: It will ask for Authentication window, enter Authentication password which user created during installation and click on Authenticate.
+Step 4: You can see the Root Terminal window.
+Step 5: Enter the command (#hping3 ---help) in Root Terminal Emulator.
+Step 6: Enter route command in Root Terminal Emulator.
+Step 7: Enter command (#nping –i u100 -S-p and default gateway Ip-address.)
+Step 8: Enter command (apt install Wireshark) and following package will get installed.
+Step 9: Open Performance Monitor App.
+Step 10: Click on Performance Monitor. It will display the current Performance evaluation on screen.
+Step 11: Click on Centre and Click on (+) Green Option showing on the screen.
+Step 12: Click on Memory, after that click on (%Committed Bytes in Use) option and click on Add.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Step 13: After that in same Counters, click on Network Interface, after that click on (Bytes Total/sec) option and click on Add and after that click on OK.
+Step 14: You’ll see that 3 lines displayed on Screen.
+Step 15: Change the colors of different lines for both Memory and Network Interface by just double clicking and apply the color as user wants and click on OK.
+Step 16: You’ll see the different colors lines on screen.
+Step 17: In VMWare Kali Linux, execute the Ip address command.
+Step 18: Open Wireshark, we’ll see the different network filters connection.
+Step 19: Select Ethernet Network Connection and start filtering.
+Step 20: Stop the Ethernet Network Connection filtering and search as ICMP in Apply a display filter option.
+
+
+
+
+
+
+
+
+Step 21: Open Command Prompt in PowerShell and Execute (Ip-configuration Command) and must check the IPV4 address in Wireshark and Command Prompt is same.
+Step 22: After in Kali Linux just Ping the command by using same IPv4 Address.
+Step 23: Open Root Terminal Emulator and Execute the command.
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2...
+Aim: - Analyze session management vulnerabilities, cookie manipulation, sequence prediction, and prevention mechanisms like secure flags and HTTPS.
+Step 1: Open Burp Suite App (As it is a Temporary Project in memory) and click on Next.
+Step 2: 	Click on Use Burp Defaults and click on Start Burp.
+Step 3: You’ll see the screen of Software.
+Step 4: Click on Proxy and On the Intercept Mode and click on open the browser.
+
+
+
+
+
+
+
+
+
+
+
+Step 5: After opening the browser, on address bar enter demo.testfire.net website name as you want and click on enter.
+Step 6: You’ll see the information and history of search.
+Step 7: Send all the data to different Filters like Sequencer, Intruder, Repeater etc.
+Step 8: Close the Request Connection which is Keep-alive in every filter.
+
+
+
+
+
+
+
+
+Step 8: Click on Sequencer, click on URL given, Click on Token Location and Click on Cookie and after that click on Configure
+Step 9: You’ll see the Token Location details like today’s search history and click on Ok.
+Step 10: Click on Cookie and click Start Capture.
+Step 11: Click on Analysis settings and we can see the live capture.
+
+
+
+
+
+3...
+Aim: - Study common web server misconfigurations, directory traversal attacks, patch management practices, and hardening strategies.
+Step 1: Open VMWare and Open Kali Linux and enter your login credentials.
+Step 2: Click on Terminal Emulator on Kali Linux Desktop.
+Step 3: You can see the Terminal Emulator window.
+Step 4: Enter the command (sudo nmap -sP 192.168.220.134/24) Terminal Emulator window.
+
+
+
+
+
+
+
+
+
+
+
+
+Step 6: Enter the command (sudo nmap -A -p- -T4 192.168.220.134/24 -oN output.txt) Terminal Emulator window.
+Step 7: Open Firefox Browser in Kali Linux and write (Windows 7 Ultimate 7601 Service Pack 1).
+Step 8: Scroll down and right click on to Open in New Tab.
+Step 9: Come back into Kali Linux Terminal Emulator and enter the command i.e. (msf console) Metasploit Framework Console.
+Step 10: Enter the next command in msf i.e. (search eternalblue) in Metasploit Framework Console.
+Step 11: Check from the list about RCE Detection number and enter use 24 command and on next line write show options.
+Step 12: On next command, write (set RHOSTS and user ip address i.e., 192.168.220.134).
+Step 13: On next command, write run command.
+Step 14: On next command, write search eternalblue command.
+Step 15: On next command, write (run 0) and show options.
+Step 12: Click on Analyze Now, like graph chart we’ll see the live capture packets graphically.
+Step 13: Click on Bit-level analysis, here in this we can see the Bit position of live capture packets.
+
+
+
+
+
+
+
+
+
+
+
+
+6...
+Aim: - Study stack-based buffer overflow, memory layout, return address overwriting, and secure programming techniques.
+Step 1: Open VMWare and Open Kali Linux and enter your login credentials.
+Step 2: Open Terminal Emulator.
+Step 3: To perform stack-based buffer overflow, create the buffer overflow folder using command (mkdir -p ~/buffer-overflow-lab) and after that next command (cd ~/buffer-overflow-lab), you’ll see that path has been changed.
+Step 4: Now we’ve to create a vulnerable file in buffer overflow by using command (nano vuln.c)
+
+
+
+Update Kali by using command (sudo apt update)
+Check whether GCC exists command (gcc --version)
+To install in Terminal, enter the command (sudo apt install -y gcc)
+After this you should verify the installation.
+You’ll see the type like (gcc (Debian…)
+
+
+
+
+
+
+
+
+Step 5: By entering (nano vuln.c) click on enter, you’ll see the sample code.
+Step 6: To save and do the changes do the following steps:
+(CLTR + O) 🡪 ENTER 🡪 (CTRL + X)
+By performing these steps your code will get saved into buffer overflow file.
+Step 7: To Compile the file enter the command (gcc -g -O0 -o vuln vuln.c)
+
+
+
+
+
+
+
+Step 8: To Execute the practical enter the command (./vuln hello) and click on enter.
+Step 9: You’ll see the following output:
+Step 10: To test with longer vulnerable input enter the command 
+(./vuln AAAAAAAAAAAAAAAAAAAAAAAA) and click on enter.
+Step 11: Open with GDB (GNU Project Debugger), enter the command (gdb ./vuln) and click on enter.
+
+
+
+
+
+
+
+
+
+Step 12: Inside GDB enter the function named as (break vulnerable_function) and click on enter.
+Step 13: You’ll see the break points of vulnerable functions.
+Step 14: Inside GDB after breakpoints enter the run hello command (run hello) and click on enter. 
+Step 15: Inside GDB after run hello enter the command (info frame), you’ll see the frame and stack buffer overflow information.
+
+
+
+
+
+
+
+
+
+
+Step 16: Inside GDB after run hello enter the command (info registers), you’ll see the stack registers information.
+Step 17: After this, to disassemble the function in GDB enter the command (disassemble vulnerable_function) you’ll see the all disassemble vulnerable functions.
+Step 18: To make an end of buffer stack overflow enter the command (x/32wx $rsp).
+Step 19: Finally to Quit from buffer stack overflow enter the command i.e. (quit).
+
+
+
+
+
+
+
+
+
+
+ 7...
+Aim: - Compare WEP, WPA, WPA2, WPA3 protocols, wireless sniffing risks, rogue access points, and wireless security best practices.
+Step 1: Open Command Prompt (CMD) in PowerShell window.
+Step 2: Enter the command: (netsh wlan show interfaces).
+Command Purpose: 
+Displays information about the currently connected Wi-Fi network. 
+To identify whether your current connection is using WPA, WPA2, WPA3, etc.
+Step 3: Enter the command: (netsh wlan show networks).
+Command Purpose:
+Displays nearby available Wi-Fi networks detected by your computer.
+To compare the security types of nearby wireless networks.
+Step 4: Enter the command: (netsh wlan show networks mode=bssid)
+Command Purpose: 
+Displays detailed information about nearby Wi-Fi access points.
+Mainly useful for studying access points.
+
+
+
+
+
+
+
+
+
+
+
+Step 5: Enter the command: (netsh wlan show drivers).
+Command Purpose:
+Displays information about your computer's wireless network adapter and its supported Wi-Fi capabilities.
+To determine what wireless technologies your adapter supports.
+Step 6: Enter the command: (netsh wlan show profiles).
+Command Purpose: 
+Lists the Wi-Fi network profiles saved on your windows computer.
+To identify configured wireless network profiles.
+Step 7: Enter the command: (Get-NetAdapter).
+Command Purpose:
+Displays your computer's network adapters.
+To identify and check the status of your wireless network adapter.
+
+
+
+
+
+
+
+
+
+
+
+
+Step 8: Enter the command: (Get-NetConnectionProfile).
+Command Purpose: 
+Displays information about the currently connected network profile.
+To identify the current Wi-Fi network and its Windows network profile.
+
+
+
+
+
+
+
+
+
+
+
+
+
+8...
+Aim: - Examine the architecture of keyloggers and spyware, detection methods, behavioral analysis, and endpoint protection mechanisms.
+Step 1: Download and install Python 3.14.3 version.
+Step 2: Click on Modify and Click on Next.
+Step 3: Click on pip and again click on next:
+Step 4: Click on Add Python to Environment Variables and click on Install.
+Step 5: Open CMD, check python version, install pip, upgrade pip and install pynput (Python library package) in CMD.
+Step 6: Open IDLE Python software and execute the following code:
+
+How to install pip in Python:
+Step1: Open Browser and write get pip.py and click on enter.
+Step2: Right click on (Download the script, from https://bootstrap.pypa.io/get-pip.py.) and Save link as and select the location in Downloads and save it.
+Step3: Open CMD and write python .\get-pip.py and click on Enter. pip will get installed.
+Step4: Check python version using command (python --version)
+Step5: After pip, install pandas using command (pip install pandas)
+Step6: After pip, install numpy using command (pip install numpy)
+Step7: After pip, install pynput using command (pip install pynpu
+
+
+
+
+
+
+
+CODE:
+from collections import Counter
+# Simulated events — no real keyboard monitoring occurs.
+events = [
+    ("keyboard", "key_event"),
+    ("keyboard", "key_event"),
+    ("keyboard", "key_event"),
+    ("keyboard", "key_event"),
+    ("file", "write"),
+    ("file", "write"),
+    ("network", "outbound_connection"),
+    ("keyboard", "key_event"),
+    ("keyboard", "key_event"),
+    ("file", "write"),
+    ("network", "outbound_connection"),
+]
+def analyze_behavior(events):
+    counts = Counter(category for category, action in events)
+ print("=== Endpoint Behavioral Analysis ===")
+    print(f"Keyboard events : {counts['keyboard']}")
+    print(f"File writes     : {counts['file']}")
+    print(f"Network events  : {counts['network']}")
+   suspicious = []
+ # Detect excessive keyboard-event collection
+    if counts["keyboard"] >= 5:
+        suspicious.append("High-volume keyboard event collection")
+
+    # Detect combination of keyboard collection + file writes
+    if counts["keyboard"] >= 5 and counts["file"] >= 2:
+        suspicious.append("Keyboard collection combined with file activity")
+
+    # Detect possible collection + outbound communication
+    if counts["keyboard"] >= 5 and counts["network"] >= 1:
+        suspicious.append("Keyboard collection combined with network activity")
+
+    print("\n=== Detection Results ===")
+
+    if suspicious:
+        for item in suspicious:
+            print("[ALERT]", item)
+    else:
+        print("[OK] No suspicious behavior detected")
+analyze_behavior(events)
+
+
+
+
+
+
+Save this file using name and extension: (behavior_detector.py)
+Output:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
